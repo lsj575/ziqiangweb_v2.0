@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加入我们</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="__CSS__/haf.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/contract/contract_css.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="__CSS__/contract/small.css">
+</head>
+<body>
+<div id="head">
+    <div id="head-body">
+        <!-- 导航栏左面的部分 -->
+        <div id="head-left">
+            <a href="../blog/blog.html"><img src="__IMG__/zqs_icon.jpg" id="zqs_icon"></a>
+            <a href=""><img src="__IMG__/zqs.png" id="zqs"></a>
+            <div id="icon-display">
+                <span class="glyphicon glyphicon-th-list"></span>
+            </div>
+        </div>
+        <!-- 导航栏右面的部分 -->
+        <div id="head-right">
+            <div id="label">
+                <ul>
+                    <li class="default_li"><a href="../index/index.html">主页</a></li>
+                    <li class="default_li"><a href="../activity/activity.html">活动介绍</a></li>
+                    <li class="default_li"><a href="../genius/genius.html">自强人物</a></li>
+                    <li class="default_li active_li_fixed"><a href="">加入我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box fadeInUp animated">
+            <br/>
+            <h3>加入我们</h3>
+            <p>春风十里不如你</p>
+        </div>
+    </div>
+    <div class="forms">
+        <form class="form-inline" method="get" action="{:url('contract/addsign')}">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 form-group">
+                    <input type="text" class="form-control" style="width: 100%; margin:0em 0 1em 0" name="name" id="name" placeholder="姓名">
+                </div>
+                <div class="col-xs-12 col-md-4 form-group">
+                    <input type="text" class="finput form-control" style="width: 100%; margin:0em 0 1em 0" name="class" id="class" placeholder="班级">
+                </div>
+                <div class="col-xs-12 col-md-4 form-group">
+                    <input type="text" class="finput form-control" style="width: 100%; margin:0em 0 1em 0" name="sex" id="sex" placeholder="性别">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-4 form-group">
+                    <input type="text" class="finput form-control" style="width: 100%; margin:0em 0 1em 0" name="tel" id="tel" placeholder="电话">
+                </div>
+                <div class="col-xs-12 col-md-4 form-group">
+                    <input type="text" class="finput form-control" style="width: 100%; margin:0em 0 1em 0" name="qq" id="qq" placeholder="QQ">
+                </div>
+                <div class="col-xs-12 col-md-4 form-group">
+                    <input type="text" class="finput form-control" style="width: 100%; margin:0em 0 1em 0" name="dorm" id="dorm" placeholder="宿舍">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-md-6 ">
+                    <select name="dept1" id="dept1" class="form-control" style="width: 100%; margin:0em 0 1em 0">
+                        <optgroup label="第一志愿"></optgroup>
+                        <option value="策划部">策划部</option>
+                        <option value="办公室">办公室</option>
+                        <option value="外联部">外联部</option>
+                        <option value="宣传部">宣传部</option>
+                        <option value="服务队" selected="selected">义工服务队</option>
+                    </select>
+                </div>
+                <div class="col-xs-6 col-md-6 ">
+                    <select name="dept2" id="dept2" class="form-control" style="width: 100%; margin:0em 0 1em 0">
+                        <option value="">第二志愿</option>
+                        <option value="策划部">策划部</option>
+                        <option value="办公室">办公室</option>
+                        <option value="外联部">外联部</option>
+                        <option value="宣传部">宣传部</option>
+                        <option value="服务队">义工服务队</option>
+                    </select>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <textarea name="content" id="content" class="form-control" style="width: 100%; margin:0 0 1em 0" rows="5" placeholder="个人简介(例如：性格、爱好、特长、干部经历等等）"></textarea>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-default">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="foot">
+    <div id="picture">
+        <a href=""><img src="__IMG__/kongjian.png"></a>
+        <a href=""><img src="__IMG__/weixin.png"></a>
+        <a href=""><img src="__IMG__/weibo.png"></a>
+    </div>
+    <p>联系我们</p>
+    <p class="link">友情链接：<a href="http://www.whutacm.cn/">WHUTOJ</a></p>
+    <span></span>
+    <div id="foot-part1">
+        <span>Copyright©2017blablabla号</span><br/>
+    </div>
+    <div id="foot-part2">
+        <span>武汉理工大学自强社&nbsp&nbsp&nbsp&nbsp&nbspPowered By ziqiangshe.</span>
+    </div>
+</div>
+<script type="text/javascript" src="__JS__/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$("button").click(function(check){
+        var options1=$("#dept1 option:selected");
+        var options2=$("#dept2 option:selected");
+        if(options1.val()==options2.val()){
+        	alert("第一志愿和第二志愿不能相同！");
+            //alert(options1.val());
+            check.preventDefault();
+        }
+        else{
+        	$.ajax({
+            	url:"{:url('contract/addsign')}",
+                type:"GET",
+                dataType:"json",
+                data:{
+                    name:$("#name").val(),
+                    class:$("#class").val(),
+                    sex:$("#sex").val(),
+                    tel:$("#tel").val(),
+                    qq:$("#qq").val(),
+                    dorm:$("#dorm").val(),
+                    dept1:$("#dept1 option:selected").val(),
+                    dept2:$("#dept2 option:selected").val(),
+                    content:$("#content").val(),
+            	},
+                success:function(data){
+                	if(data.errcode==0){
+                        window.location.href="http://1.ziqiangshe.applinzi.com/tp5/public/index.php/index/index/index.html";
+                    	alert("提交成功！");
+                    }
+                    else if(data.errcode==-1){
+                    	alert("提交失败！");
+                    }
+                },
+            });
+        }
+    });
+    
+    
+    $(".glyphicon-th-list").on("touchstart",function(){
+        var top=$("#head-right").css("top");
+        if(top=="50px"){
+            $("#head-right").css("top","5px");
+        }
+        if(top=="5px"){
+            $("#head-right").css("top","50px");
+        }
+    })
+
+    $(".default_li").mouseover(function(){
+		$(this).addClass("active_li");
+	});
+	$(".default_li").mouseout(function(){	
+		$(this).removeClass("active_li");
+	});
+</script>
+</body>
+</html>

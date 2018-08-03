@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>数据渲染</title>
+</head>
+<body>
+    <div id="content"></div>
+    <script type="text/javascript" src="__JS__/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="__JS__/handlebars-v4.0.10.js"></script>
+    <script id="content-template" type="text/x-handlebars-template">
+    	{{#each this}}
+    	<div class="character">
+        	<div>{{realname}}</div>
+            <div>{{sex}}</div>
+            <div>{{position}}</div>
+        </div>
+    	{{/each}}
+    </script>
+    <script>
+        var CLASSPATH="http://1.ziqiangshe.applinzi.com/tp5/public/index.php/index/genius/getgenius";
+        $.getJOSN(CLASSPATH,function(data){
+        	var source=$("#content-template").html();
+            var template=Handlebars.compile(source);
+            var con=template(data);
+            $("#content").html(con);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>控制台 - 服务端</title>
+    <link href="__CSS__/bootstrap.min.css" rel="stylesheet">
+    <link href="__CSS__/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="__CSS__/sb-admin-2.css" rel="stylesheet">
+    <link href="__CSS__/plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="__FONT__/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+
+    <object style="border:0px" type="text/x-scriptlet" data="../Layout/toolbar.php" width=100% height=50></object>
+
+    </nav>
+
+    <div class="navbar-default sidebar" role="navigation" style="margin-top:20px">
+        <ul class="nav" id="side-menu">
+            <li class="sidebar-search">
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+          <button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button>
+          </span>
+                </div>
+                <br>
+            </li>
+
+            <li>
+                <a href="../Home/index.php"><h4><center>控制台</center></h4></a>
+            </li>
+<!--            <li>
+                <a href="#">活动介绍</a>
+            </li>
+-->
+            <li class="active">
+                <a href="blog_list.html">博客内容</a>
+            </li>
+            <li>
+                <a href="#">活动入口<span class="fa arrow"></span></a>
+                	<ul class="nav nav-second-level">
+                		<li><a href="#">旧书圆新梦</a></li>
+                		<li><a href="#">义务卖报</a></li>
+                	</ul>          
+            </li>         
+<!--            <li class="active">
+                <a href="../Book/book_list.html">旧书圆新梦</a>
+            </li>
+-->
+            <li>
+                <a href="../Sign/sign_list.html">报名信息<!-- <span class="fa arrow"></span> --></a>
+                <!--         <ul class="nav nav-second-level">
+                        <li><a href="../Sign/sign_list_fuwudui.html">义工服务队</a></li>
+                        <li><a href="../Sign/sign_list_xuanchuan.html">宣传部</a></li>
+                        <li><a href="../Sign/sign_list_cehua.html">策划部</a></li>
+                        <li><a href="../Sign/sign_list_wailian.html">外联部</a></li>
+                        <li><a href="../Sign/sign_list_zuzhi.html">办公室</a></li>
+                        </ul> -->
+            </li>
+            <li>
+                <a href="#">自强人物<span class="fa arrow"></span></a>
+                	<ul class="nav nav-second-level">
+                		<li><a href="#">我的寄语</a></li>
+                		<li><a href="#">人物管理</a></li>
+                	</ul>          
+            </li>             
+            <li>
+                <a href="#">用户管理<span class="fa arrow"></span></a>
+                	<ul class="nav nav-second-level">
+                		<li><a href="#">个人信息</a></li>
+                		<li><a href="#">用户列表</a></li>
+                	</ul>          
+            </li> 
+        </ul>
+    </div>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">博客内容</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading"> 博客内容 </div>
+                    <div class="panel-body">
+                        <div style="text-align:right;"> <button type="button" class="btn btn-success" style="margin-bottom:5px;" onclick="location.href='add.html'" >添加内容</button></div>
+                        <div class="dataTable_wrapper">
+                           <table class="table table-striped table-bordered table-hover" id="dataTable">
+                                <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>标题</th>
+                                    <th>发布日期</th>
+                                    <th>浏览量</th>
+                                    <th>作者</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__JS__/jquery-1.11.0.js"></script>
+<script src="__JS__/bootstrap.min.js"></script>
+<script src="__JS__/plugins/metisMenu/metisMenu.min.js"></script>
+<script src="__JS__/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="__JS__/plugins/dataTables/dataTables.bootstrap.js"></script>
+<script src="__JS__/sb-admin-2.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#dataTable').dataTable({
+            "oLanguage": {
+                "sProcessing": "Loading...",
+                "sLengthMenu": "显示_MENU_条 ",
+                // "sZeroRecords": "没有您要搜索的内容",
+                "sInfo": "_START_ - _END_ 共 _TOTAL_ 条",
+                "sInfoEmpty": "记录数为0",
+                "sInfoFiltered": "(共 _MAX_  条)",
+                "sInfoPostFix": "",
+                // "sSearch": "搜索",
+                // "sUrl": "",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "尾页"
+                }
+            },
+            "bJQueryUI": true,
+            "bPaginate": true, // 分页按钮
+            "bFilter": false, // 搜索栏
+            "bLengthChange": true, // 每行显示记录数
+            "iDisplayLength": 15, // 每页显示行数
+            "bSort": false, // 排序
+            "bInfo": true, // Showing 1 to 10 of 23 entries 总记录数没也显示多少等信息
+            "bWidth": true,
+            "bScrollCollapse": true,
+            "sPaginationType": "full_numbers", // 分页，一共两种样式 另一种为two_button // 是datatables默认
+            "bProcessing": true,
+            "bServerSide": true,
+            "bDestroy": true,
+            "bSortCellsTop": true,
+            "sAjaxSource": 'http://1.ziqiangshe.applinzi.com/tp5/public/index.php/panel/blog/getblog',
+            "aoColumns": [{
+                "mData": "id",
+            }, {
+                "mData": "title",
+            }, {
+                "mData": "date",
+            }, {
+                "mData": "pageview",
+            }, {
+                "mData": "anthor",
+            }, {
+                "mData": "id",
+                "mRender": function(data, type, full) {
+                    return "<a href='http://1.ziqiangshe.applinzi.com/tp5/public/index.php/panel/blog/edit?id=" + data + "' target='_self'>编辑</a> | " +
+                        "<a href='http://1.ziqiangshe.applinzi.com/tp5/public/index.php/panel/blog/look?id=" + data + "' target='_self'>查看</a> | " +
+                        "<a href='http://1.ziqiangshe.applinzi.com/tp5/public/index.php/panel/blog/delblog?id=" + data + "' target='_self'>删除</a>";
+                }
+            }],
+            "fnServerData": function(sSource, aoData, fnCallback) {
+                $.ajax({
+                    "type": 'post',
+                    "url": sSource,
+                    "dataType": "json",
+                    "data": {
+                        aoData: JSON.stringify(aoData)
+                    },
+                    "success": function(resp) {
+                        fnCallback(resp);
+                    }
+                });
+
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

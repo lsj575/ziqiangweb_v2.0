@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="__CSS__/genius.css">
+	<link rel="stylesheet" type="text/css" href="__CSS__/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__CSS__/haf.css">
+	<meta charset="utf-8">	
+	<title>自强人物</title>
+</head>
+<body>
+<!-- 导航栏 -->
+<div id="head">
+	<div id="head-body">
+		<!-- 导航栏左面的部分 -->
+		<div id="head-left">
+			<a href="../blog/blog.html"><img src="__IMG__/zqs_icon.jpg" id="zqs_icon"></a>
+			<a href=""><img src="__IMG__/zqs.png" id="zqs"></a>
+			<div id="icon-display">
+				<span class="glyphicon glyphicon-th-list"></span>
+			</div>
+		</div>
+		<!-- 导航栏右面的部分 -->
+		<div id="head-right">
+			<div id="label">
+				<ul>
+                    <li class="default_li"><a href="../index/index.html">主页</a></li>
+					<li class="default_li"><a href="../activity/activity.html">活动介绍</a></li>
+					<li class="default_li active_li_fixed"><a href="">自强人物</a></li>
+					<li class="default_li"><a href="../contract/contract.html">加入我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="body">
+
+	<div id="body_right">
+		<div id="page_infor">
+			<h1>自强人物</h1>
+			<img src="__IMG__/github.jpg">
+			<p>经历过，收获过，风云人物且看自强</p>
+		</div>
+		
+		<div id="search_infor" class="list-group">
+			<a href="##" class="list-group-item" id="daohang">自强人物导航栏</a>
+			<div id="list_father">
+				<button type="button" value="12" class="list-group-item">2012级</button>
+				<button type="button" value="13" class="list-group-item">2013级</button>
+				<button type="button" value="14" class="list-group-item">2014级</button>
+				<button type="button" value="15" class="list-group-item">2015级</button>
+                <button type="button" value="16" class="list-group-item">2016级</button>
+			</div>
+		</div>	
+	</div>
+	<div id="body_left">
+<!--  模板原文
+		<div class="page_infor1">20{{session}}级</div>		
+		<div class="person">			
+			<div class="person_infor" name="chenyahui">
+				<div class="person_infor_l">
+					<img src="person.img/chenyahui_icon.jpg">
+				</div>
+				<div class="person_infor_r">
+					<h2>{{realname}}</h2>
+					<p>[简介]20{{session}}级{{position}}</p>
+				</div>	
+				<div class="person_infor_s">
+					<span class="glyphicon glyphicon-chevron-down"></span>	
+				</div>
+			</div>
+			<div class="person_speak"> 				
+				<div class="introduce">
+                    <h2>感触/寄语：</h2>
+                    <p>{{introduce}}</p>
+                </div>
+			</div>
+		</div>
+-->
+	</div>
+</div>
+<div id="foot">
+	<div id="picture">
+		<a href=""><img src="__IMG__/kongjian.png"></a>
+		<a href=""><img src="__IMG__/weixin.png"></a>
+		<a href=""><img src="__IMG__/weibo.png"></a>
+	</div>
+	<p>联系我们</p>
+	<p class="link">友情链接：<a href="http://www.whutacm.cn/">WHUTOJ</a></p>
+	<span></span>
+	<div id="foot-part1">
+		<span>Copyright©2017blablabla号</span><br/>
+	</div>
+	<div id="foot-part2">
+		<span>武汉理工大学自强社&nbsp&nbsp&nbsp&nbsp&nbspPowered By ziqiangshe.</span>
+	</div>
+</div>
+
+<script type="text/javascript" src="__JS__/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="__JS__/bootstrap.min.js"></script>
+<script type="text/javascript" src="__JS__/genius.js"></script>
+<script type="text/javascript" src="__JS__/handlebars-v4.0.10.js"></script>
+<script type="text/javascript">
+	$(".glyphicon-th-list").on("touchstart",function(){
+		var top=$("#head-right").css("top");
+		if(top=="50px"){
+			$("#head-right").css("top","5px");
+		}
+		if(top=="5px"){
+			$("#head-right").css("top","50px");
+		}
+	})
+</script>
+<script id="person-template" type="text/x-handlebars-template">
+	{{!--<div class="page_infor1">20{{session}}级</div>--}}
+	{{#each this}}
+ 	<div class="person">
+    	<div class="person_infor" name="{{realname}}">
+        	<div class="person_infor_l">
+            	<img src="__IMG__/genius.png">
+            </div>
+        	<div class="person_infor_r">
+            	<h2>{{realname}}</h2>
+            	<p>[职务]20{{session}}级{{position}}</p>
+        	</div>
+        	<div class="person_infor_s">
+           	 	<span class="glyphicon glyphicon-chevron-down"></span>
+        	</div>
+   		</div>
+   		<div class="person_speak" id="{{realname}}">
+    		<div class="introduce">
+        		<h2>感触/寄语：</h2>
+            	<p>{{introduce}}</p>
+        	</div>		
+    	</div>
+  	</div>
+    {{/each}}
+</script>
+<script>
+	$(function(){
+    	var CLASSPATH_ogl="http://localhost/ziqiangweb_v2.0/public/index.php/index/genius/getgenius?grad=12";
+        $.getJSON(CLASSPATH_ogl,function(data){
+        	var source_ogl=$("#person-template").html();
+            var template_ogl=Handlebars.compile(source_ogl);
+            var con_ogl=template_ogl(data.data);
+            $("#body_left").html(con_ogl); 
+			var flag=0;
+            var person_name=new Array();
+            for(var i=0;i<data.data.length;i++){
+            	person_name[i]=data.data[i].realname;
+                $("#"+person_name[i]).hide();
+            }
+			/*var person_name=new Array("陈亚辉","高文昌","廖星","梁爽","张玉斌","李统旭","刘雨培","李文坦","骆代鹏","卢双","邵威","笑天","谢泽丰","张浩浩","张泰然","龙思杰","官宇霞","胡钧焱","刘婧伊");
+			for(var i=0;i<person_name.length;i++){
+				var name=person_name[i];
+				$("#"+name).hide();
+			}*/
+			$(".person_infor").click(function(){
+				var name=this.getAttribute("name");
+				for(var i=0;i<person_name.length;i++){
+					var name1=person_name[i];
+					if(name==name1){
+						if((flag%2)==0)
+						{
+							foot_test(name1);
+						}
+						else{
+							$("#foot").css("top","2000px");
+						}
+						flag++;
+						$("#"+name).slideToggle(400);
+					}
+				}
+			});
+            function foot_test(name){
+                $("#"+name).css("display","block");
+                $("#"+name).css("visibility","hidden");
+                var d_height=$("#"+name).height()+2000;
+                $("#"+name).css("display","none");
+                $("#"+name).css("visibility","visible");
+                $("#foot").css("top",d_height+"px");
+            }
+        });
+    });
+    $("button").click(function(){
+       	var index=$(this).val();
+       	var CLASSPATH="http://localhost/ziqiangweb_v2.0/public/index.php/index/genius/getgenius?grad="+index;
+        $.getJSON(CLASSPATH,function(data){
+        	var source=$("#person-template").html();
+            var template=Handlebars.compile(source);
+            var con=template(data.data);
+            $("#body_left").html(con);
+			var flag=0;
+            var person_name=new Array();
+            for(var i=0;i<data.data.length;i++){
+            	person_name[i]=data.data[i].realname;
+                $("#"+person_name[i]).hide();
+            }
+			/*var person_name=new Array("陈亚辉","高文昌","廖星","梁爽","张玉斌","李统旭","刘雨培","李文坦","骆代鹏","卢双","邵威","金笑天","谢泽丰","张浩浩","张泰然","龙思杰","官宇霞","胡钧焱","刘婧伊");
+			for(var i=0;i<person_name.length;i++){
+				var name=person_name[i];
+				$("#"+name).hide();
+			}*/
+			$(".person_infor").click(function(){
+				var name=this.getAttribute("name");
+				for(var i=0;i<person_name.length;i++){
+					var name1=person_name[i];
+					if(name==name1){
+						if((flag%2)==0)
+						{
+							foot_test(name1);
+						}
+						else{
+							$("#foot").css("top","2000px");
+						}
+						flag++;
+						$("#"+name).slideToggle(400);
+					}
+				}
+			});
+            function foot_test(name){
+                $("#"+name).css("display","block");
+                $("#"+name).css("visibility","hidden");
+                var d_height=$("#"+name).height()+2000;
+                $("#"+name).css("display","none");
+                $("#"+name).css("visibility","visible");
+                $("#foot").css("top",d_height+"px");
+            }
+        });
+    });
+    
+    $(".default_li").mouseover(function(){
+		$(this).addClass("active_li");
+	});
+	$(".default_li").mouseout(function(){	
+		$(this).removeClass("active_li");
+	});
+    
+    
+</script>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>数据渲染</title>
+</head>
+<body>
+    <div id="content"></div>
+    <button type="button" value="12">12</button>
+    <button type="button" value="13">13</button>
+    <button type="button" value="14">14</button>
+    <button type="button" value="15">15</button>
+    <button type="button" value="16">16</button>
+    <script type="text/javascript" src="__JS__/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="__JS__/handlebars-v4.0.10.js"></script>
+	<script id="person-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <div class="person">
+            <div class="person_infor>
+                <div class="person_infor_l>
+                </div>
+                <div class="person_infor_r">
+                    <h2>{{realname}}</h2>
+                    <p>[简介]20{{session}}级{{position}}</p>
+                </div>
+                <div class="person_infor_s">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </div>
+            </div>
+            <div class="person_speak">
+                <div class="introduce">
+                    <h2>感触/寄语：</h2>
+                    <p>{{introduce}}</p>
+                </div>		
+            </div>
+         </div>
+         {{/each}}
+    </script>-->
+   <!-- <script id="content-template" type="text/x-handlebars-template">
+    	{{#each this}}
+    	<div class="character">
+        	<div>{{realname}}</div>
+            {{!--<div>{{position}}</div>--}}
+        </div>
+        {{/each}}
+    </script>-->
+<!--    <script>
+        $(function(){
+            var CLASSPATH_ogl="http://1.ziqiangshe.applinzi.com/tp5/public/index.php/index/genius/getgenius?grad=12";
+            $.getJSON(CLASSPATH_ogl,function(data){
+                var source_ogl=$("#person-template").html();
+                var template_ogl=Handlebars.compile(source_ogl);
+                var con_ogl=template_ogl(data.data);
+                $("#content").html(con_ogl);
+            });        	
+        });
+        $("button").click(function(){
+        	var index=$(this).val();
+            var CLASSPATH="http://1.ziqiangshe.applinzi.com/tp5/public/index.php/index/genius/getgenius?grad="+index;
+            $.getJSON(CLASSPATH,function(data){
+            	var source=$("#person-template").html();
+                var template=Handlebars.compile(source);
+                var con=template(data.data);
+                $("#content").html(con);
+            });
+        });
+    </script>
+</body>
+</html>-->
+
+<!--自强人物页面渲染部分模板
+<script id="person-template" type="text/x-handlebars-template">
+	{{#each this}}
+	<div class="person">
+		<div class="person_infor>
+			<div class="person_infor_l>
+			</div>
+			<div class="person_infor_r">
+				<h2>{{realname}}</h2>
+				<p>[简介]20{{session}}级{{position}}</p>
+			</div>
+			<div class="person_infor_s">
+				<span class="glyphicon glyphicon-chevron-down"></span>
+			</div>
+		</div>
+		<div class="person_speak">
+			<div class="introduce">
+                <h2>感触/寄语：</h2>
+                <p>{{introduce}}</p>
+			</div>		
+		</div>
+</script>
+-->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head></head>
+<title>测试UM</title>
+<body>
+<!-- 样式文件 -->
+<link rel="stylesheet" href="__UM__/themes/default/css/umeditor.css">
+<!-- 引用jquery -->
+<script src="__UM__/third-party/jquery.min.js"></script>
+<!-- 引入 etpl -->
+<script type="text/javascript" src="__UM__/third-party/template.min.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="__UM__/umeditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__UM__/umeditor.js"></script>
+<!-- 语言包文件 -->
+<script type="text/javascript" src="__UM__/lang/zh-cn/zh-cn.js"></script>
+<!-- 实例化编辑器代码 -->
+<script type="text/javascript">
+    $(function(){
+        window.um = UM.getEditor('container', {
+            /* 传入配置参数,可配参数列表看umeditor.config.js */
+//            toolbar: ['undo redo | bold italic underline']
+        });
+    });
+</script>
+测试UM
+<form action="http://ziqiangshe.applinzi.com/tp5/public/index.php/panel/blog/testblog">
+    <input name="id" value="{if $rel}{$rel.id}{/if}">
+    标题：<input name="title" value="{if $rel}{$rel.title}{/if}">
+    <br/>
+    标签： <input name="tag" value="{if $rel}{$rel.tag}{/if}">
+    <br/>
+    <div>
+        <label>内容</label>
+        <!-- 加载编辑器的容器 -->
+        <script id="container" name="content" type="text/plain" style="width:600px;height:200px;"></script>
+    </div>
+    <button type="submit">submit</button>
+</form>
+</body>
+</html>
