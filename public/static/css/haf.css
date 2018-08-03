@@ -1,0 +1,300 @@
+body{
+	width: 100%;
+}
+a{
+	text-decoration: none !important;
+	color: #333 !important;
+}
+a:hover {
+	color: orangered !important;
+}
+li{
+	list-style-type: none !important;
+}
+html{
+	width: 100%;
+}
+
+/*pc端css代码*/
+@media screen and (min-width: 900px){
+#icon-display{
+	display: none;
+}
+#head{
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-shadow: 0px 0px 0.5px 0.4px black;
+	background-color: white;
+	width: 100%;
+	height: 60px;
+	z-index: 99;
+}
+#head-body{
+	width: 95%;
+	margin:0 auto;
+}
+@media screen and (max-width: 1142px){
+#head-body{
+	width: 100%;
+}
+}
+#head-left{
+	margin-left: 40px;
+	float: left;
+	height: 60px;
+}
+#head-left>a>img{
+	height: 60px;
+}
+#head-left>a>img:first-child{
+	margin-top: 2px;
+	height: 55px;
+}
+
+#head-left>a>img:last-child{
+	margin-left: 8px;
+	margin-top: 5px;
+	height: 48px;
+}
+
+#head-right{
+	margin-right: 50px;
+	float: right;
+}
+#label{
+	float: right;
+	height: 60px;
+}
+#label>ul>li{
+	text-align: center;
+	margin-top: 5px;
+	list-style-type: none;
+	float: left;
+	height: 50px;
+	width: 130px;
+    margin-right: 15px;
+}
+#label>ul>li:hover{
+	border-radius: 3px;
+	background-color: #eeeeee;
+}
+.active_li_fixed,.active_li{
+	background-color: #eeeeee;
+}
+
+#label>ul>li>a{
+    display:block;
+    width:100%;
+    height:50px;
+    line-height:50px;
+	color: black;
+	text-decoration: none;
+	font-size: 21px;
+}
+#label>ul>li>a:hover{
+	color: OrangeRed;
+}
+.active_li>a{
+	color: OrangeRed !important;
+}
+.active_li_fixed>a{
+    color: OrangeRed !important;
+}
+#foot{
+	width: 100%;
+	height: 220px;
+	padding-top: 10px;
+	background-color: #dddddd;
+}
+#picture{
+	height: 60px;
+	width: 340px;
+	margin: 0 auto;
+	text-align: center;
+}
+#picture>a>img{
+	margin-left: 39px;
+	float: left;
+	height: 50px;
+	width: 60px;
+}
+#picture>a>img:hover{
+	transform: rotate(-5deg);
+}
+#foot>p{
+	margin-top: 10px;
+	font-size: 18px;
+	text-align: center;
+}
+.link {
+	font-size: 12px;
+	margin-bottom: 0;
+}
+#foot>span{
+	padding-top: 10px;
+	display: block;
+	height: 1px;
+	width: 100%;
+	border-bottom: 1.2px solid black;
+}
+#foot-part1{
+	width: 400px;
+	margin: 10px auto 0px auto;
+	padding-top: 10px;
+}
+#foot-part1>span{
+	float: left;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+#foot-part2{
+	width: 100%;
+}
+
+#foot-part2>span{
+	width: 100%;
+	text-align: center;
+	float:left;
+	display: block; 
+}
+}
+
+/*手机端css*/
+@media (max-width: 784px){
+#icon-display{
+	padding: 16px;
+	float: right;
+}
+#icon-display>span{
+	margin-left: 10px;
+	float: left;
+	font-size: 17px;
+}
+
+#head-left{
+	width: 100%;
+	height: 55px;
+	background-color: white;
+	box-shadow: 0px 0px 4px 4px #eeeeee;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+
+}
+
+#head-left>a{
+	float: left;
+}
+#zqs_icon{
+	margin-top: 2px;
+	margin-left: 1px;
+	height: 49px;
+}
+#zqs{
+	margin-top: 9px;
+	height: 38px;
+}
+
+#head-right{
+	transition-property: all;
+	transition-duration: 0.5s;
+	height: 45px;
+	width: 100%;
+	float: left;
+	position: fixed;
+	top: 5px;
+	left: 0px;
+	z-index:99;
+}
+
+#label>ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+#label>ul>li{
+	border: 0.1px solid #e9e9e9;
+	background-color: #F6F6F6;
+	height: 45px;
+	width: 25%;
+	float: left;
+    text-align:center;
+}
+#label>ul>li:hover{
+	background-color: #3388cc;
+}
+#label>ul>li>a{
+    display:block;
+    height: 45px;
+    line-height: 45px;
+	text-align: center;
+	font-size: 17px;
+	color: black;
+}
+#label>ul>li>a:hover{
+	color: white;
+}
+
+
+#foot{
+	padding-top: 10px;
+	background-color: #DDDDDD;
+	float: left;
+	height: 180px;
+	width: 100%;
+}
+#picture{
+	height: 55px;
+	width: 210px;
+	margin: 0 auto;
+}
+#picture>a>img{
+	float: left;
+	width: 60px;
+	height: 55px;
+	margin: 0 5px 0 5px
+}
+#foot>span{
+	float: left;
+	display: block;
+	width: 100%;
+	height: 5px;
+	border-bottom: 1px solid black; 
+}
+#foot>p{
+	margin: 10px 0px 7px 0px;
+	height: 15px;
+	line-height: 15px;
+	text-align: center;
+	width: 100%;
+	float: left;
+}
+#foot-part1{
+	margin-top: 5px;
+	float: left;
+	width: 100%;
+}
+#foot-part1>span{
+	float: left;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+#foot-part2{
+	width: 100%;
+	float: left;
+}
+
+#foot-part2>span{
+	float: left;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+}
+

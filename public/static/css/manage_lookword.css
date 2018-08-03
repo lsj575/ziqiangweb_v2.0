@@ -1,0 +1,29 @@
+.circle{
+	width:14px;
+    height:14px;
+    margin-bottom:2%;
+    margin-top:1%;    
+    border-radius:7px;
+    background:white;
+}
+.author_wrapper{
+    padding-top:2%;
+    padding-left:3%;
+    padding-bottom:5%;
+    border-radius:10px;
+	background:#66CC00;
+}
+.author{
+	text-align:center;
+}
+.content_wrapper{
+    padding-top:1%;
+    padding-left:2%;
+    padding-right:2%;
+    padding-bottom:5%;
+    border-radius:10px;    
+	background:#0099CC;
+}
+.form-group label{
+	letter-spacing:2px;
+}

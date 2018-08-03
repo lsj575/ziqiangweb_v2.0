@@ -1,0 +1,26 @@
+.author{
+    border:solid 5px #CCCCCC;
+    border-radius:5px;
+    border-top-width:30px;
+    padding-top:10px;;
+}
+.author img{
+	height:60px;
+    margin-bottom:10px;
+}
+.blogger{
+    margin-top:-33px;
+}
+#blog_content{
+	border:solid 5px #0099CC;
+    border-radius:5px;
+}
+@media screen and (max-width:460px){
+    #blog_author{
+    	margin-bottom:15px;
+    }
+    #blog_content{
+    	margin-left:10px;
+        margin-right:10px;
+    }
+}

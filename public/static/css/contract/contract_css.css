@@ -1,0 +1,26 @@
+.heading-section {
+    padding-bottom: 1em;
+    margin-bottom: 5em;
+}
+.heading-section h3 {
+    font-size: 40px;
+    font-weight: 300;
+    position: relative;
+    color: #5a5a5a;
+    font-family: SimSun;
+    margin: 45px 0 30px 0;
+}
+.heading-section p {
+    font-size: 17px;
+    margin-bottom: 1.5em;
+    color: #848484;
+    font-family: SimSun;
+}
+.heading-section{
+    margin-bottom: 0em;
+}
+
+.forms{
+    margin-bottom: 5em;
+}
+

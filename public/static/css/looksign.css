@@ -1,0 +1,85 @@
+.name_wrapper{
+    height:45px;
+    padding-top:12px;
+    border-radius:10px;
+    margin-bottom:2%;
+	background:#CC9966;
+}
+.class_wrapper{
+    height:45px;
+    padding-top:12px;
+    border-radius:10px;    
+    margin-bottom:2%;
+	background:#CCCC66;
+}
+.sex_wrapper{
+    height:45px;
+    padding-top:12px;
+    border-radius:10px;
+    margin-bottom:2%;
+	background:#669999;
+}
+.phone_wrapper{
+    height:45px;
+    padding-top:12px;
+    border-radius:10px;
+    margin-bottom:2%;
+	background:#FF9966;
+}
+.qq_wrapper{
+    height:45px;
+    padding-top:12px;
+    border-radius:10px;
+    margin-bottom:2%;
+	background:#996600;
+}
+.dorm_wrapper{
+    height:45px;
+    padding-top:12px;
+    border-radius:10px;
+    margin-bottom:2%;
+	background:#CCCC00;
+}
+.wish_wrapper{
+    height:45px;
+    padding-top:12px;
+    border-radius:10px;
+    margin-bottom:2%;
+	background:#99CC99;
+}
+.introduce_wrapper{
+    padding-top:0.8%;
+    border-radius:10px;
+	background:#0099CC;
+}
+.circle{
+    margin-left:1.5%;
+    margin-top:3px;
+    margin-right:3%;
+	width:14px;
+    height:14px;
+    border-radius:7px;
+    background:white;
+    float:left;
+}
+.name_wrapper .circle{
+	margin-left:0.8%;
+    margin-right:1.2%;
+}
+.introduce_wrapper .circle{
+	margin-left:0.8%;
+    margin-right:1.2%;
+}
+.form-group label{
+	letter-spacing:2px;
+}
+@media screen and (max-width: 460px) {
+.name_wrapper .circle{
+	margin-left:1.6%;
+    margin-right:3%;
+}
+.introduce_wrapper .circle{
+	margin-left:1.6%;
+    margin-right:3%;
+} 
+}
